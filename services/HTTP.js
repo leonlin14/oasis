@@ -1,6 +1,10 @@
+const HTTPService = require('engined-http').Service;
 const config = require('config')
 const path = require('path');
-const HTTPService = require('engined-http').Service;
+
+let outputPath = path.join(__dirname, '../public')
+if (process.env.NODE_ENV == 'production' || process.env.NODE_ENV == 'dev' || process.env.NODE_ENV == 'test')
+    outputPath = path.join(__dirname, '../disits')
 
 const Service = HTTPService({
 	port: config.get('server').port
@@ -34,7 +38,7 @@ module.exports = class extends Service {
 
 	async setupStaticServe() {
 		return {
-			path: path.join(__dirname, '..', 'static')
+			path: outputPath
 		};
 	}
 
