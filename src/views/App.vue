@@ -26,7 +26,30 @@
 
         <main>
             <v-container fluid>
-            <!--v-router-->
+                <!--v-router-->
+                <template>
+                    <v-layout row wrap>
+                        <v-flex md12 lg4>
+                            <v-date-picker v-model="picker"></v-date-picker>
+                        </v-flex>
+                        <v-flex md12 lg8 class="hidden-xs-only">
+                            <v-date-picker v-model="picker2" landscape></v-date-picker>
+                        </v-flex>
+                    </v-layout>
+                </template>
+
+                <template>
+                    <div class="text-xs-center">
+                        <v-btn outline class="indigo--text">Outline Button</v-btn>
+                        <v-btn outline fab class="teal--text">
+                            <v-icon>list</v-icon>
+                        </v-btn>
+                        <v-btn outline large fab class="indigo--text">
+                            <v-icon>edit</v-icon>
+                        </v-btn>
+                    </div>
+                </template>
+
             </v-container>
         </main>
 
@@ -37,11 +60,13 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        drawer: true
-      }
+    export default {
+        data () {
+            return {
+                drawer: true,
+                picker: null,
+                picker2: null
+            }
+        }
     }
-  }
 </script>

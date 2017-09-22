@@ -6,7 +6,7 @@ module.exports = class extends RouterService() {
 	async setupRoutes() {
 
 		const router = this.createRouter();
-		
+
 		router.get('/', async (ctx, next) => {
 			await ctx.render('index');
 		});

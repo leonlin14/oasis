@@ -94,7 +94,12 @@ module.exports = {
     externals: {
         config: JSON.stringify(require('config'))
     },
+    // target: "node", // Node.js via require
 	resolve: {
+        modules: [
+            "node_modules",
+            path.resolve(__dirname, "app")
+        ],
         extensions: [ '.js', '.vue', '.json', '.css' ],
         alias: {
             'vue$': 'vue/dist/vue.min.js',
