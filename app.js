@@ -2,7 +2,7 @@ const config = require('config');
 const { Manager, Context } = require('engined');
 
 // Application Info
-const appName = config.appName;
+const appName = config.get('service').name
 
 const main = async () => {
 

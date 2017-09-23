@@ -1,4 +1,4 @@
 module.exports = {
 	HTTP: require('./HTTP'),
-	LandingPage: require('./LandingPage')
+	Router: require('./Router')
 };

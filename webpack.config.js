@@ -13,8 +13,7 @@ module.exports = {
         vendors: [
 			'babel-polyfill',
             'vue',
-            'vue-resource',
-            // 'vue-validator'
+            'vue-resource'
 		]
     },
 	output: {
@@ -104,7 +103,6 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.min.js',
 			'vue-resource$': 'vue-resource/dist/vue-resource.min.js',
-			// 'vue-validator$': 'vue-validator/dist/vue-validator.min.js',
 			Source: path.join(__dirname, 'src')
 		}
 	}
