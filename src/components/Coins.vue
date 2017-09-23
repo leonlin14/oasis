@@ -7,8 +7,6 @@
 </template>
 
 <script>
-  import Vue from 'vue'
-
   export default {
     name: 'Coins',
     data() {
@@ -24,7 +22,7 @@
     },
     methods: {
         fetchData() {
-            Vue.http.get('https://api.coinmarketcap.com/v1/ticker/'+this.$route.params.id+'/')
+            this.$http.get('https://api.coinmarketcap.com/v1/ticker/'+this.$route.params.id+'/')
                 .then(
                     (resp) => {
                         this.coin = resp.data[0]
