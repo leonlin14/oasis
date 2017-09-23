@@ -1,15 +1,21 @@
 <template>
-  <div class="about">
-    <h1>What is a Crypto-Currency?</h1>
-    <p>
-      It's a digital currency in which encryption techniques are used to regulate the generation of units of currency
-      and verify the transfer of funds, operating independently of a central bank.
-    </p>
-  </div>
+  <v-layout row wrap>
+    <v-flex md12 lg4>
+      <v-date-picker v-model="picker"></v-date-picker>
+    </v-flex>
+    <v-flex md12 lg8 class="hidden-xs-only">
+      <v-date-picker v-model="picker2" landscape></v-date-picker>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
 export default {
-  name: 'About'
-}
+    data () {
+      return {
+        picker: null,
+        picker2: null
+      }
+    }
+  }
 </script>

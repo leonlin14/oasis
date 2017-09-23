@@ -1,5 +1,11 @@
 <template>
   <div>
+      <router-link :to="{ name: 'Home' }">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/coins/ethereum">Ethereum</router-link>
+      <router-link to="/coins/bitcoin">Bitcoin</router-link>
+      <br />
+      <br /><br /><br />
     <p>Name: {{ coin.name }}</p>
     <p>Symbol: {{ coin.symbol }}</p>
     <p>Price (USD): {{ coin.price_usd }}</p>

@@ -20,7 +20,7 @@
             </v-toolbar>
             <v-list class="pt-0" dense>
                 <v-divider></v-divider>
-                <v-list-tile v-for="item in items" :key="item.title" @click="">
+                <v-list-tile v-for="item in items" :key="item.title" @click="link(item)">
                     <v-list-tile-action>
                         <v-icon>{{ item.icon }}</v-icon>
                     </v-list-tile-action>
@@ -61,6 +61,20 @@
                 ],
                 mini: false,
                 right: null
+            }
+        },
+        methods: {
+            link (item) {
+                if (item.title == 'Home') {
+                    this.$router.push({
+                        path: '/'
+                    })
+                }
+                if (item.title == 'About') {
+                    this.$router.push({
+                        path: '/about'
+                    })
+                }
             }
         }
     }
