@@ -1,6 +1,6 @@
 <template>
   <div>
-      <router-link :to="{ name: 'Home' }">Home</router-link>
+      <router-link :to="{ name: 'LandingPage' }">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/coins/ethereum">Ethereum</router-link>
       <router-link to="/coins/bitcoin">Bitcoin</router-link>

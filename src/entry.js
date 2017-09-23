@@ -11,15 +11,15 @@ Vue.use(VueRouter)
 // require('../../node_modules/vuetify/src/stylus/main.styl')
 
 // Customized components
-import App from './App.vue';
+import App from './App.vue'
 
 // new Vue(App).$mount('#app');
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,
-    template: '<App/>',
+    template: '<App />',
     components: { App }
 })
