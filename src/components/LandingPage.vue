@@ -1,11 +1,14 @@
 <template>
     <v-container grid-list-xl text-xs-center>
         <v-layout row wrap>
-            <v-flex xs6 offset-xs3>
+            <v-flex xs12 sm12 md8 offset-md2 lg6 offset-lg3 >
                 <template>
                     <v-tabs dark fixed centered>
-                        <v-toolbar extended class="cyan" dark>
-                                <v-toolbar-title slot="extension" class="display-2">Welcome To Engined</v-toolbar-title>
+                        <v-toolbar extended class="cyan hidden-sm-and-up" dark>
+                            <h2 style="margin-top: 90px">Welcome To Engined</h2>
+                        </v-toolbar>
+                        <v-toolbar extended class="cyan hidden-xs-only" dark>
+                            <v-toolbar-title slot="extension" class="display-2 ">Welcome To Engined</v-toolbar-title>
                         </v-toolbar>
 
                         <v-tabs-bar class="cyan">
